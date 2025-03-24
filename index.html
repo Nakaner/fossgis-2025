@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="de">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>OpenStreetMap ist doch vollständig …</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/white.css">
+		<link rel="stylesheet" href="custom.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+                                <section>
+				    <section>
+                                        <h1 style="font-size: 180%;">OpenStreetMap ist doch vollständig …</h1>
+
+                                        <p>Michael Reichert<br>
+
+                                        FOSSGIS-Konferenz 2025, Münster (Westf.)</p>
+                                    </section>
+				    <section data-markdown>
+                                        ## Inhalt
+
+                                        * Motivation
+                                        * Was mappen?
+                                        * Mappingtechniken und Tourenplanung
+                                    </section>
+                                </section>
+                                <section data-markdown>
+                                    ## Motivation
+                                </section>
+                                <section>
+				    <section>
+                                        <h2>Nutzt StreetComplete!</h2>
+                                        <img class="stretch" src="img/streetcomplete-screenshot3.webp">
+                                    </section>
+				    <section>
+                                        <h2>Nutzt StreetComplete!</h2>
+                                        <img class="stretch" src="img/streetcomplete-tasks.webp">
+                                    </section>
+                                </section>
+                                <section>
+				    <section data-markdown>
+                                        ## Notes
+
+                                        ![](img/notes-muenster.png)
+                                    </section>
+				    <section data-markdown>
+                                        ## Notes
+
+                                        [https://antonkhorev.github.io/osm-note-viewer](https://antonkhorev.github.io/osm-note-viewer)
+
+                                        ![](img/khorev1.png)
+                                    </section>
+				    <section>
+                                        <h2>Notes</h2>
+                                        <div class="r-stack">
+                                            <img height="600px" src="img/khorev2.png">
+                                            <div class="fragment" style="width: 80%; background-color: white">
+                                                <pre class="gf-smaler">
+                                                    <code data-line-numbers>^
+text !~= "Attached photo(s)"
+                                                    </code>
+                                                </pre>
+                                            </div>
+                                        </div>
+                                    </section>
+                                </section>
+                                <section>
+				    <section data-markdown>
+                                        ## Fixme
+
+                                        Deutschland: ca. 240.000 Objekte mit `fixme=*` oder `FIXME=*`
+
+                                        ![](img/fixme-chart-de.svg)
+                                    </section>
+				    <section>
+                                        <h2>Fixme</h2>
+                                        <p class="gf-smaller">OSM Inspector (<a href="https://tools.geofabrik.de/osmi">https://tools.geofabrik.de/osmi</a>)</p>
+
+                                        <img class="stretch" src="img/osmi1.png">
+                                    </section>
+				    <section>
+                                        <h2>Fixme</h2>
+                                        <img class="stretch" src="img/osmi2.png">
+                                    </section>
+				    <section>
+                                        <h2>Alte Fixmes</h2>
+                                        <img class="stretch" src="img/deep-history-hydrant.png">
+                                    </section>
+                                </section>
+                                <section>
+				    <section data-markdown>
+                                        ## Oberflächen
+
+                                        `surface=*`, `smoothness=*`, `tracktype=*`
+
+                                        XXX % des Straßen- und Wegenetz ohne Information
+                                    </section>
+				    <section>
+                                        <h2>Oberflächen</h2>
+                                        <p>in Münster</p>
+                                        <img class="stretch" src="img/surface-muenster.png">
+                                    </section>
+				    <section>
+                                        <h2>Oberflächen</h2>
+                                        <p>bei Ostbevern</p>
+                                        <img class="stretch" src="img/surface-ostbevern.png">
+                                    </section>
+				    <section class="smaller-font">
+                                        <h2>Oberflächen</h2>
+                                        <div class="r-stack">
+                                            <img height="600px" src="img/surface-schwirzheim.png">
+                                            <div class="fragment" style="width: 80%; background-color: white">
+                                                <pre class="gf-smaler">
+                                                    <code data-line-numbers data-trim>
+(
+  way[highway][highway!=track]
+    [!surface]({{bbox}});
+  way[highway=track][!tracktype]
+    [!surface]({{bbox}});
+);
+out geom;
+                                                    </code>
+                                                </pre>
+                                            </div>
+                                        </div>
+                                    </section>
+                                </section>
+				<section>
+				    <section>
+                                        <h2>Postbriefkästen</h2>
+                                        <p><span class="osmtag">amenity=post_box</span></p>
+                                        <p>in zusammenhängend bebauten Wohngebieten i.d.R. höchstens 1000 m entfernt (§ 17 Abs. 3 PostG)</p>
+                                        <img class="stretch" src="img/briefkasten-foto.webp">
+                                    </section>
+				    <section>
+                                        <h2>Postbriefkästen</h2>
+                                        <img class="stretch" src="img/briefkaesten.png">
+                                    </section>
+				    <section>
+                                        <h2>Postbriefkästen</h2>
+                                        <img class="stretch" src="img/briefkaesten-bei-muenster.png">
+                                    </section>
+                                </section>
+				<section>
+				    <section>
+                                        <h2>Breite/Höhe/Gewicht</h2>
+                                        <div class="gf-flex-container" style="gap: 40px">
+                                          <img height="350px" width="auto" src="img/unterfuehrung.webp">
+                                          <img height="350px" width="auto" src="img/bruecke-gewicht.webp">
+                                        </div>
+                                        <p class="gf-tiny">Bildquellen: CC-BY-SA 4.0 Reinhold Möller (links), Joachim Kohler (rechts)</p>
+                                    </section>
+				    <section>
+                                        <h2>Maximales Gewicht</h2>
+                                        <img class="stretch" src="img/maxweight.png">
+                                    </section>
+				    <section>
+                                        <h2>Maxheight Map</h2>
+                                        <p><a href="http://maxheight.bplaced.net/">http://maxheight.bplaced.net/</a></p>
+                                        <img class="stretch" src="img/maxheight-map.png">
+                                    </section>
+                                </section>
+				<section>
+				    <section>
+                                        <h2>Fehlende Wirtschaftswege</h2>
+                                        <img class="stretch" src="img/osm-lueckig-oppenau.png">
+                                    </section>
+				    <section>
+                                        <h2>Fehlende Wirtschaftswege</h2>
+                                        <img class="stretch" src="img/osm-lueckig-oppenau-2.png">
+                                    </section>
+				    <section>
+                                        <h2>Fehlende Wirtschaftswege</h2>
+                                        <img class="stretch" src="img/geoportal-bw.png">
+                                    </section>
+                                </section>
+				<section>
+				    <section>
+                                        <h2>Fehlende Wanderrouten</h2>
+                                    </section>
+				    <section>
+                                        <h2>Fehlende Wanderrouten</h2>
+                                        <img class="stretch" src="img/waymarkedtrails-neustadt.png">
+                                    </section>
+				    <section>
+                                        <h2>Fehlende Wanderrouten</h2>
+                                        <img class="stretch" src="img/outdooractive-neustadt.png">
+                                    </section>
+                                </section>
+                                <section>
+				    <section data-markdown>
+                                        ## Mappingtipps
+
+                                        * Fahrrad: 7–8 km/h im Mittelgebirge
+                                          * Auswertung: XXX
+                                        * zu Fuß: 3–4 km/h
+                                          * Auswertung: XXX
+				    </section>
+				    <section>
+                                        <h2>Mappingtipps</h2>
+                                        <img class="stretch" src="img/gravelbike-seitlich.webp">
+				    </section>
+				    <section>
+                                        <h2>Mappingtipps</h2>
+                                        <img class="stretch" src="img/gravelbike-vorbau.webp">
+                                    </section>
+				    <section data-markdown>
+                                        ## Fragen?                            
+
+                                        Michael Reichert
+
+                                        osm-ml@michreichert.de
+
+                                        Slides: https://michreichert.de/projects/fossgis-2025/
+
+                                        Lizenz der Folien: CC-BY 4.0
+                                    </section>
+                                </section>
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
+</html>

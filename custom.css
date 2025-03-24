@@ -1,0 +1,46 @@
+.strike {
+    text-decoration: line-through;
+}
+.osmtag {
+    font-family: monospace;
+}
+.multipolygon-slides .osmtag {
+    font-size: 80%;
+}
+.tags-slide {
+    font-size: 0.8em;
+}
+.tags-slide-table {
+    display: flex;
+    font-size: 0.7em;
+}
+.tags-slide .cols2 {
+    text-align: left;
+}
+.cols2 {
+    margin-left: 3%;
+    margin-right: 3%;
+}
+
+section.smaller-font h2 {
+    font-size: 1.2em;
+}
+
+p.gf-smaller,
+section.smaller-font p {
+    font-size: 38px;
+}
+
+pre.gf-smaller {
+    font-size: 0.4em;
+}
+
+.gf-tiny {
+    font-size: 14px;
+}
+
+.gf-flex-container {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+}
