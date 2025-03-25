@@ -27,8 +27,13 @@ section.smaller-font h2 {
 }
 
 p.gf-smaller,
+section.smaller-font ul,
 section.smaller-font p {
     font-size: 38px;
+}
+
+ul.gf-smaller {
+    font-size: 30px;
 }
 
 pre.gf-smaller {
@@ -39,8 +44,21 @@ pre.gf-smaller {
     font-size: 14px;
 }
 
+.gf-side-by-side,
 .gf-flex-container {
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-evenly;
+}
+
+.gf-side-by-side {
+    align-items: center;
+}
+
+.gf-side-by-side div {
+    padding: 25px;
+}
+
+.reveal h2 {
+    text-transform: none;
 }

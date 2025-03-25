@@ -29,21 +29,20 @@
                                         ## Inhalt
 
                                         * Motivation
-                                        * Was mappen?
-                                        * Mappingtechniken und Tourenplanung
+                                        * Notes und Fixmes
+                                        * Mappingwürdige Gebiete finden
+                                        * Andere Features/Attribute
+                                        * Erfassungsmethoden und Zeitaufwand
                                     </section>
-                                </section>
-                                <section data-markdown>
-                                    ## Motivation
                                 </section>
                                 <section>
 				    <section>
-                                        <h2>Nutzt StreetComplete!</h2>
-                                        <img class="stretch" src="img/streetcomplete-screenshot3.webp">
+                                        <h2>Motivation</h2>
+                                        <img class="stretch" src="img/gravelbike-seitlich.webp">
                                     </section>
 				    <section>
-                                        <h2>Nutzt StreetComplete!</h2>
-                                        <img class="stretch" src="img/streetcomplete-tasks.webp">
+                                        <h2>Wohin?</h2>
+                                        <img class="stretch" src="img/bikerouter.png">
                                     </section>
                                 </section>
                                 <section>
@@ -136,41 +135,6 @@ out geom;
                                 </section>
 				<section>
 				    <section>
-                                        <h2>Postbriefkästen</h2>
-                                        <p><span class="osmtag">amenity=post_box</span></p>
-                                        <p>in zusammenhängend bebauten Wohngebieten i.d.R. höchstens 1000 m entfernt (§ 17 Abs. 3 PostG)</p>
-                                        <img class="stretch" src="img/briefkasten-foto.webp">
-                                    </section>
-				    <section>
-                                        <h2>Postbriefkästen</h2>
-                                        <img class="stretch" src="img/briefkaesten.png">
-                                    </section>
-				    <section>
-                                        <h2>Postbriefkästen</h2>
-                                        <img class="stretch" src="img/briefkaesten-bei-muenster.png">
-                                    </section>
-                                </section>
-				<section>
-				    <section>
-                                        <h2>Breite/Höhe/Gewicht</h2>
-                                        <div class="gf-flex-container" style="gap: 40px">
-                                          <img height="350px" width="auto" src="img/unterfuehrung.webp">
-                                          <img height="350px" width="auto" src="img/bruecke-gewicht.webp">
-                                        </div>
-                                        <p class="gf-tiny">Bildquellen: CC-BY-SA 4.0 Reinhold Möller (links), Joachim Kohler (rechts)</p>
-                                    </section>
-				    <section>
-                                        <h2>Maximales Gewicht</h2>
-                                        <img class="stretch" src="img/maxweight.png">
-                                    </section>
-				    <section>
-                                        <h2>Maxheight Map</h2>
-                                        <p><a href="http://maxheight.bplaced.net/">http://maxheight.bplaced.net/</a></p>
-                                        <img class="stretch" src="img/maxheight-map.png">
-                                    </section>
-                                </section>
-				<section>
-				    <section>
                                         <h2>Fehlende Wirtschaftswege</h2>
                                         <img class="stretch" src="img/osm-lueckig-oppenau.png">
                                     </section>
@@ -186,9 +150,6 @@ out geom;
 				<section>
 				    <section>
                                         <h2>Fehlende Wanderrouten</h2>
-                                    </section>
-				    <section>
-                                        <h2>Fehlende Wanderrouten</h2>
                                         <img class="stretch" src="img/waymarkedtrails-neustadt.png">
                                     </section>
 				    <section>
@@ -196,22 +157,110 @@ out geom;
                                         <img class="stretch" src="img/outdooractive-neustadt.png">
                                     </section>
                                 </section>
+				<section>
+				    <section>
+                                        <h2>Postbriefkästen</h2>
+                                        <p><span class="osmtag">amenity=post_box</span></p>
+                                        <p>in zusammenhängend bebauten Wohngebieten i.d.R. höchstens 1000 m entfernt (§ 17 Abs. 3 PostG)</p>
+                                        <img class="stretch" src="img/briefkasten-foto.webp">
+                                    </section>
+				    <!--<section>
+                                        <h2>Postbriefkästen</h2>
+                                        <img class="stretch" src="img/briefkaesten.png">
+                                    </section>-->
+				    <section>
+                                        <h2>Postbriefkästen</h2>
+                                        <img class="stretch" src="img/briefkaesten-bei-muenster.png">
+                                    </section>
+				    <section>
+                                        <h2>Gasthöfe</h2>
+                                        <img class="stretch" src="img/gasthof-geschlossen.webp">
+                                        <p class="gf-tiny">Bild: Flodur63 (CC-BY-SA 4.0)</p>
+                                    </section>
+				    <section>
+                                        <h2>Breite/Höhe/Gewicht</h2>
+                                        <div class="gf-flex-container" style="gap: 40px">
+                                          <img height="350px" width="auto" src="img/unterfuehrung.webp">
+                                          <img height="350px" width="auto" src="img/bruecke-gewicht.webp">
+                                        </div>
+                                        <p class="gf-tiny">Bildquellen: CC-BY-SA 4.0 Reinhold Möller (links), Joachim Kohler (rechts)</p>
+                                    </section>
+				    <section>
+                                        <h2>Brücken ohne Gewichtsangabe</h2>
+                                        <p><span class="osmtag">maxweight=*</span>, <span class="osmtag">maxweight:signed=no</span></p>
+                                        <img class="stretch" src="img/maxweight.png">
+                                    </section>
+				    <section>
+                                        <h2>Maxheight Map</h2>
+                                        <p><a href="http://maxheight.bplaced.net/">http://maxheight.bplaced.net/</a></p>
+                                        <img class="stretch" src="img/maxheight-map.png">
+                                    </section>
+                                </section>
                                 <section>
-				    <section data-markdown>
-                                        ## Mappingtipps
+				    <section class="smaller-font" data-markdown>
+                                        ## Mappingmethoden
 
-                                        * Fahrrad: 7–8 km/h im Mittelgebirge
-                                          * Auswertung: XXX
-                                        * zu Fuß: 3–4 km/h
-                                          * Auswertung: XXX
+                                        * einzelne Orte, Fortbewegung dominiert:
+                                          * StreetComplete
+                                          * Vespucci
+                                          * GoMap!!
+                                          * EveryDoor
+                                        * systematisch, Mapping dominiert:
+                                          * Fotomapping mit Actionkamera am Fahrrad/Körper
+                                          * Wegpunkte und Notizen, Fotos mit dem Smartphone
+                                          * mobile Editoren
 				    </section>
 				    <section>
-                                        <h2>Mappingtipps</h2>
-                                        <img class="stretch" src="img/gravelbike-seitlich.webp">
+                                        <h2>Mapping per Fahrrad</h2>
+                                        <div class="r-stretch">
+                                            <img src="img/gravelbike-seitlich.webp">
+                                            <img src="img/gravelbike-vorbau.webp">
+                                        </div>
+                                        <ul class="gf-smaller" style="padding-top: 20px">
+                                            <li>7–8 km/h im Mittelgebirge</li>
+                                            <li>etwas Vespucci/StreetComplete</li>
+                                            <li>Straßeneigenschaften</li>
+                                            <li>draußen: ca. 25 Wegpunkte/Stunde</li>
+                                            <li>Erfahrungswert: 30–60 Wegpunkte/Stunde mit JOSM</li>
+                                        </ul>
 				    </section>
 				    <section>
-                                        <h2>Mappingtipps</h2>
-                                        <img class="stretch" src="img/gravelbike-vorbau.webp">
+                                        <h2>Foto-Mapping per Fahrrad</h2>
+                                        <div class="r-stretch">
+                                            <img src="img/gravelbike-seitlich.webp">
+                                            <img src="img/gravelbike-vorbau.webp">
+                                        </div>
+                                        <ul class="gf-smaller" style="padding-top: 20px">
+                                            <li>nur Straßeneigenschaften</li>
+                                            <li>Zeitraffer-Fotoaufnahme, Intervall 5 Sekunden</li>
+                                            <li>45 km, 17 km/h ohne Pausen, 1900 Fotos</li>
+                                            <li>dünn besiedelt, eine Kleinstadt, keine abzweigenden Wege</li>
+                                            <li>12 Fotos/Min. draußen → 9 Fotos/Min. in JOSM</li>
+                                        </ul>
+				    </section>
+				    <section>
+                                        <h2>Mapping zu Fuß</h2>
+                                        <div class="r-stretch">
+                                            <img src="img/notizbuch.webp">
+                                            <img src="img/etrex-30.webp">
+                                        </div>
+                                        <ul class="gf-smaller" style="padding-top: 20px">
+                                            <li>3,3 km/h inkl. Pausen</li>
+                                            <li>Straßeneigenschaften, Wanderrouten, Wegweiser</li>
+                                            <li>draußen: ca. 12 Wegpunkte/Stunde</li>
+                                            <li>JOSM: ca. 22 Wegpunkte/Stunde</li>
+                                        </ul>
+                                        <p class="gf-tiny">rechtes Bild: F1jmm, CC-BY-SA 4.0</p>
+				    </section>
+                                </section>
+				<section>
+				    <section>
+                                        <h2>Nutzt StreetComplete!</h2>
+                                        <img class="stretch" src="img/streetcomplete-screenshot3.webp">
+                                    </section>
+				    <section>
+                                        <h2>Nutzt StreetComplete!</h2>
+                                        <img class="stretch" src="img/streetcomplete-tasks.webp">
                                     </section>
 				    <section data-markdown>
                                         ## Fragen?                            
