@@ -3,6 +3,7 @@
 }
 .osmtag {
     font-family: monospace;
+    font-size: 90%;
 }
 .multipolygon-slides .osmtag {
     font-size: 80%;
@@ -55,7 +56,8 @@ pre.gf-smaller {
     align-items: center;
 }
 
-.gf-side-by-side div {
+.gf-side-by-side div,
+.gf-side-by-side img {
     padding: 25px;
 }
 

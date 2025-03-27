@@ -38,7 +38,7 @@
                                 <section>
 				    <section>
                                         <h2>Motivation</h2>
-                                        <img class="stretch" src="img/gravelbike-seitlich.webp">
+                                        <img class="stretch" src="img/autokemp-vesely-habr.webp">
                                     </section>
 				    <section>
                                         <h2>Wohin?</h2>
@@ -96,25 +96,24 @@ text !~= "Attached photo(s)"
                                     </section>
                                 </section>
                                 <section>
+                                    <!-- 3.373.363 km highway=<in Betrieb> in DACH -->
+                                    <!-- 1,5 Mio. km highway=track, davon 14 % ohne surface/tracktype -->
 				    <section data-markdown>
-                                        ## Oberflächen
+                                        ## Fehlende Oberflächen
 
-                                        `surface=*`, `smoothness=*`, `tracktype=*`
+                                        `surface=*`, `tracktype=*`, `smoothness=*`
 
-                                        XXX % des Straßen- und Wegenetz ohne Information
+                                        * 14 % aller `highway=track` ohne `surface=*` oder `tracktype=*` (gesamt 1,5 Mio. km)
+                                        * 41 % aller anderen Straßen/Wege ohne `surface=*` (gesamt 1,9 Mio. km)
+                                        * fehlt v.a. bei `highway=steps/service/footway/unclassified/residential`
                                     </section>
 				    <section>
-                                        <h2>Oberflächen</h2>
+                                        <h2>Fehlende Oberflächen</h2>
                                         <p>in Münster</p>
                                         <img class="stretch" src="img/surface-muenster.png">
                                     </section>
-				    <section>
-                                        <h2>Oberflächen</h2>
-                                        <p>bei Ostbevern</p>
-                                        <img class="stretch" src="img/surface-ostbevern.png">
-                                    </section>
 				    <section class="smaller-font">
-                                        <h2>Oberflächen</h2>
+                                        <h2>Fehlende Oberflächen</h2>
                                         <div class="r-stack">
                                             <img height="600px" src="img/surface-schwirzheim.png">
                                             <div class="fragment" style="width: 80%; background-color: white">
@@ -131,6 +130,14 @@ out geom;
                                                 </pre>
                                             </div>
                                         </div>
+                                    </section>
+				    <section>
+                                        <h2>Straßen/Wege ohne <span class="osmtag">surface=*</span></h2>
+                                        <iframe class="stretch" src="maps/surface_score.html" width="900" height="500"></iframe>
+                                    </section>
+				    <section class="smaller-font">
+                                        <h2><span class="osmtag">highway=track</span> ohne <span class="osmtag">surface=*</span> oder <span class="osmtag">tracktype=*</span></h2>
+                                        <iframe class="stretch" src="maps/track_score.html" width="900" height="500"></iframe>
                                     </section>
                                 </section>
 				<section>
@@ -226,16 +233,20 @@ out geom;
 				    </section>
 				    <section>
                                         <h2>Foto-Mapping per Fahrrad</h2>
-                                        <div class="r-stretch">
-                                            <img src="img/gravelbike-seitlich.webp">
-                                            <img src="img/gravelbike-vorbau.webp">
+                                        <div class="gf-flex-container gf-side-by-side">
+                                            <img width="600" height="auto" src="img/gravelbike-seitlich-byczyna.webp">
+                                            <img width="600" height="auto" src="img/gopro-dropbar.webp">
                                         </div>
+				    </section>
+				    <section>
+                                        <h2>Foto-Mapping per Fahrrad</h2>
+                                        <img class="stretch" src="img/brompton-lenker.webp">
                                         <ul class="gf-smaller" style="padding-top: 20px">
                                             <li>nur Straßeneigenschaften</li>
                                             <li>Zeitraffer-Fotoaufnahme, Intervall 5 Sekunden</li>
                                             <li>45 km, 17 km/h ohne Pausen, 1900 Fotos</li>
-                                            <li>dünn besiedelt, eine Kleinstadt, keine abzweigenden Wege</li>
-                                            <li>12 Fotos/Min. draußen → 9 Fotos/Min. in JOSM</li>
+                                            <li>Polen, dünn besiedelt, eine Kleinstadt, keine abzweigenden Wege</li>
+                                            <li>12 Fotos/Min. draußen → 9 Fotos/Min. mit JOSM</li>
                                         </ul>
 				    </section>
 				    <section>
